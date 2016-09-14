@@ -35,11 +35,11 @@ module.exports = function (grunt) {
                 options: {
                     separator: ';'
                 },
-                src: ['assets/js/**.js'],
+                src: ['assets/js/**.js', 'node_modules/material-design-lite/material.js'],
                 dest: 'public/js/<%= pkg.name %>.js'
             },
             css: {
-                src: ['assets/css/**.css'],
+                src: ['assets/css/**.css', 'node_modules/material-design-lite/material.css'],
                 dest: 'public/css/<%= pkg.name %>.css'
             },
         },
@@ -103,22 +103,10 @@ module.exports = function (grunt) {
                         cwd: 'assets/img/',
                         src: ['**']
                     },
-                    {
-                        expand: true,
-                        dest: 'assets/js/',
-                        cwd: 'node_modules/material-design-lite/',
-                        src: ['material.js']
-                    },
-                    {
-                        expand: true,
-                        dest: 'assets/css/',
-                        cwd: 'node_modules/material-design-lite/',
-                        src: ['material.css']
-                    },
                 ],
-                updateAndDelete: false, // Remove all files from dest that are not found in src. Default: false
-                compareUsing: "md5", // compares via md5 hash of file contents, instead of file modification time. Default: "mtime"
-                verbose: true // Display log messages when copying files
+                updateAndDelete: false,
+                compareUsing: "md5",
+                verbose: true
             }
         }
     });
