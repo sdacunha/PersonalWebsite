@@ -27,7 +27,7 @@ module.exports = function (grunt) {
         },
         jshint: {
             assets: ['assets/**/*.js'],
-            server: ['app.js']
+            server: ['server.coffee']
 
         },
         concat: {
@@ -45,7 +45,7 @@ module.exports = function (grunt) {
         },
         watch: {
             scripts: {
-                files: ['assets/css/**', 'assets/js/**', 'assets/img/**'],
+                files: ['assets/css/**', 'assets/js/**', 'assets/img/**', 'assets/sass/**'],
                 tasks: ['sync', 'sass', 'coffee', 'concat', 'cssmin', 'uglify', ],
                 options: {
                     spawn: true,

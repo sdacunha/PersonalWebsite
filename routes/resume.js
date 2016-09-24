@@ -1,9 +1,10 @@
 var express = require('express');
 var router = express.Router();
 
-/* GET users listing. */
+
 router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
+    var file = __dirname + '/../resume/Shadwell_Resume.pdf';
+    res.download(file); // Set disposition and send it.
 });
 
 module.exports = router;

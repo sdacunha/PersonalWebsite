@@ -1,4 +1,8 @@
 # Created by .ignore support plugin (hsz.mobi)
+
+### Poets posts folder
+_posts
+
 ### Sass template
 .sass-cache/
 *.css.map
