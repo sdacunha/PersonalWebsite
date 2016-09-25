@@ -10,20 +10,19 @@ module.exports = function (grunt) {
         },
         concurrent: {
             main: {
-                tasks: ['nodemon', 'watch'],
+                tasks: ['forever', 'watch'],
                 options: {
                     logConcurrentOutput: true
                 }
             }
         },
-        nodemon: {
-            main: {
-                script: './bin/www',
+        forever: {
+            server: {
                 options: {
-                    cwd: __dirname,
-                    ignore: ['Gruntfile.js', 'bower.json', '.gitignore', 'package.json', 'README.md', 'node_modules/**', 'bower_components/**', 'public/**', '/views/**', 'assets/js/**', 'assets/css/**'],
+                    index: './bin/www',
+                    logDir: 'logs'
                 }
-            }
+            },
         },
         jshint: {
             assets: ['assets/**/*.js'],
@@ -122,7 +121,7 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-concurrent');
-    grunt.loadNpmTasks('grunt-nodemon');
+    grunt.loadNpmTasks('grunt-forever');
     grunt.loadNpmTasks('grunt-sync');
 
     grunt.registerTask('default', ['clean', 'coffee', 'sass', 'sync', 'concat', 'cssmin', 'uglify', 'concurrent']);
