@@ -35,7 +35,7 @@ module.exports = function (grunt) {
                 options: {
                     separator: ';'
                 },
-                src: ['assets/js/**.js', 'node_modules/equalizer/dist/equalizer.js', 'node_modules/material-design-lite/material.js'],
+                src: ['assets/js/**.js', 'node_modules/moment/moment.js', 'node_modules/equalizer/dist/equalizer.js', 'node_modules/material-design-lite/material.js'],
                 dest: 'public/js/<%= pkg.name %>.js'
             },
             css: {

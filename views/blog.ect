@@ -1,11 +1,12 @@
 <% extend 'layouts/main-layout' %>
+<% moment = require('moment'); %>
 <div class="page-content">
     <div class="mdl-layout">
             <% for post in @posts: %>
             <div class="mdl-card mdl-shadow--2dp mdl-cell mdl-cell--2-offset-desktop mdl-cell--8-col-desktop mdl-cell--12-col-tablet mdl-cell--12-col-phone">
 
                 <div class="mdl-card__title">
-                    <h4 class="mdl-card__title-text"><%- post.date.toLocaleDateString() %> - <%- post.title %></h4>
+                    <h4 class="mdl-card__title-text"><%- post.title %></h4>
                 </div>
                 <div class="stretch-post mdl-card__supporting-text">
                     <%- post.preview %>
@@ -16,11 +17,13 @@
                     </a>
                 </div>
                 <div class="mdl-card__menu">
-                    <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
-                        <i class="material-icons">share</i>
-                    </button>
+                    <%= moment(post.date).format('MMMM Do YYYY') %>
                 </div>
             </div>
             <% end %>
     </div>
 </div>
+
+<script>
+    moment().format();
+</script>
