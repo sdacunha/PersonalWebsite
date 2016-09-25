@@ -1,3 +1,23 @@
-.home-banner {
-
+.home-card-wide > .mdl-card__title,
+.home-card-wide-two > .mdl-card__title,
+.home-card-wide-three > .mdl-card__title {
+  color: #fff;
+  height: 300px;
+}
+.home-card-wide > .mdl-card__menu,
+.home-card-wide-two > .mdl-card__menu,
+.home-card-wide-three > .mdl-card__menu  {
+  color: #fff;
+}
+.home-card-wide-three {
+  margin-top: 30px !important;
+}
+.home-card-wide > .mdl-card__title {
+  background: url('../img/banner.jpg') center / cover;
+}
+.home-card-wide-two > .mdl-card__title {
+  background: url('../img/banner_2.jpg') center / cover;
+}
+.home-card-wide-three > .mdl-card__title {
+  background: url('../img/banner_3.jpg') center / cover;
 }

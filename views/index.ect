@@ -1,40 +1,77 @@
 <% extend 'layouts/main-layout' %>
+
 <div class="page-content">
-    <main class="mdl-layout__content">
-        <div class="mdl-cell mdl-cell--2-offset-desktop mdl-cell--8-col-desktop mdl-cell--12-col-tablet mdl-cell--12-col-phone mdl-card mdl-shadow--4dp">
-            <div class="mdl-card__media">
-                <img class="home-banner" src=" img/banner.jpg" width="100%" border="0" alt="">
+    <div class="mdl-grid">
+        <div class="home-card-wide mdl-cell--2-offset-desktop mdl-cell mdl-cell--4-col-desktop mdl-cell--12-col-tablet mdl-cell--12-col-phone mdl-card mdl-shadow--4dp">
+            <div class="mdl-card__title">
+                <h2 class="mdl-card__title-text">Introduction</h2>
             </div>
-
-            <div class="mdl-grid portfolio-copy">
-                <h3 class="mdl-cell mdl-cell--12-col mdl-typography--headline">Introduction</h3>
-                <div class="mdl-cell mdl-cell--12-col mdl-card__supporting-text no-padding ">
-                    <p>
-                        Hi! I'm Shadwell Da Cunha, a second year Computer Science student at the University of Waterloo,
-                        currently working part-time as a software developer at Deloitte. On this site, you will find my
-                        various projects and random
-                        ramblings in the form of a blog.
-                        This site is very much a constant work in progress, so if a feature isn't working, its probably
-                        because I am working on it.
-                        I am currently looking for Software Engineering internships, specifically ones that deal with
-                        blockchain or large data sets.
-                    </p>
-                </div>
-
-
-                <!--<h3 class="mdl-cell mdl-cell&#45;&#45;12-col mdl-typography&#45;&#45;headline">Site is a work in progress!</h3>-->
-
-                <!--<div class="mdl-cell mdl-cell&#45;&#45;12-col mdl-card__supporting-text no-padding ">-->
-                <!--<p>-->
-                <!--I am currently in the process of migrating to this new site. Since my adoption of strict-->
-                <!--minimalism + Material design, I have had to-->
-                <!--code large portions of my older site from scratch (this is essentially a new web page). Please-->
-                <!--report any issues to contact@sdacunha.com.-->
-                <!--Your help is much appreciated!-->
-                <!--</p>-->
-                <!--</div>-->
+            <div class="mdl-card__supporting-text equalize">
+                Hi! I'm Shadwell Da Cunha, a second year Computer Science student at the University of Waterloo,
+                currently working part-time as a software developer at Deloitte. On this site, you will find my
+                various projects and random
+                ramblings in the form of a blog.
+                This site is very much a constant work in progress, so if a feature isn't working, its probably
+                because I am working on it.
+                I am currently looking for Software Engineering internships, specifically ones that deal with
+                blockchain or large data sets.
+            </div>
+            <div class="mdl-card__actions mdl-card--border">
+                <a href="/posts/about-me" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+                    Read More
+                </a>
             </div>
         </div>
-    </main>
 
+        <div class="home-card-wide-two mdl-cell mdl-cell--4-col-desktop mdl-cell--12-col-tablet mdl-cell--12-col-phone mdl-card mdl-shadow--4dp">
+            <div class="mdl-card__title">
+                <h2 class="mdl-card__title-text">My mission</h2>
+            </div>
+            <div class="mdl-card__supporting-text equalize">
+                I am an entrepreneur at heart. I strive to work with people who can be the catalyst for positive
+                change
+                using technology. Simply put, I want to do things that <u>matter</u>. I also strive to learn
+                something
+                from every brilliant mind I come across, so that using their wisdom I can constantly improve the way
+                I
+                approach problems.
+            </div>
+            <div class="mdl-card__actions mdl-card--border">
+                <a href="/posts/my-mission" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+                    Read More
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="home-card-wide-three mdl-cell--2-offset-desktop mdl-cell mdl-cell--8-col-desktop mdl-cell--12-col-tablet mdl-cell--12-col-phone mdl-card mdl-shadow--4dp">
+        <div class="mdl-card__title">
+            <h2 class="mdl-card__title-text">Things I Believe In</h2>
+        </div>
+        <div class="mdl-card__supporting-text">
+            I'll try to keep this short and sweet. Despite my background, I believe people are the solution to most of
+            our biggest problems, so I approach every venture using lean methodology; If you want to build a
+            product people care
+            about, you have to find out <u>what</u> people are about. I am a minimalist, and a huge fan of
+            Google's
+            Material Design spec. I believe in internal and external collaboration in a company is key to the
+            success
+            of any product. I believe in cloud computing and the viability of blockchain as a secure platform
+            for
+            any use-case. Finally, I believe that design is as important to a product as the technology that
+            backs it.
+        </div>
+        <div class="mdl-card__actions mdl-card--border">
+            <a href="/posts/things-i-believe-in" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+                Read More
+            </a>
+        </div>
+    </div>
 </div>
+
+<script>
+    window.onload = function(){
+        var eq = new Equalizer('.equalize');
+        eq.align();
+    };
+</script>

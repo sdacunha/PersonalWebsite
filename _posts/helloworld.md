@@ -2,7 +2,7 @@
 "title": "Hello World",
 "tags": ["blog", "fun"],
 "category": "Misc",
-"date": "9-24-2016"
+"date": "9-23-2016"
 }}}
 
 Well, this is my first post..
