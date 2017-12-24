@@ -1,3 +1,4 @@
+
 //noinspection CssUnknownTarget
 .hero-collapsing-header {
   position: fixed;
@@ -5,25 +6,16 @@
   left: 0;
   height: 80vh;
   width: 100%;
-  display: flex;
   filter: blur(0);
+  display: flex;
   flex-direction: column;
   background: black url("/img/header_background.jpg") no-repeat;
   background-size: cover;
-  transition: all 0.1s linear;
   opacity: 0;
   align-items: center;
   justify-content: center;
+  transform: translate3d(0,0,0);
 
-  //improve blue performance?
-  -webkit-backface-visibility: hidden;
-  -webkit-perspective: 1000;
-  -webkit-transform: translate3d(0, 0, 0);
-  -webkit-transform: translateZ(0);
-  backface-visibility: hidden;
-  perspective: 1000;
-  transform: translate3d(0, 0, 0);
-  transform: translateZ(0);
 
   h2 {
     color: white;
@@ -168,7 +160,7 @@
     }
 
     &.slick-active {
-      color: #546e7a;
+      color: #ff4081;
     }
   }
 }
@@ -177,5 +169,59 @@
   color: #ff4081;
   &.inline {
     display: inline-block;
+  }
+}
+
+//noinspection CssUnknownTarget
+.navbar {
+  position: fixed;
+  top: 80vh;
+  z-index: 999;
+  display: flex;
+  height: 65px;
+  width: 100%;
+  transition: background-color 1s;
+  background-color: rgba(#000000, 0);
+
+  &.fixed {
+    background-color: rgba(#000000, 0.9);
+    transition: background-color 1s;
+  }
+
+  .left {
+    position: absolute;
+    left: 65px;
+
+    ul {
+      height: 65px;
+      vertical-align: middle;
+      display: flex;
+      margin: 0;
+      align-items: center;
+      justify-items: center;
+    }
+    li {
+      display: inline-block;
+      height: 25px;
+      width: 25px;
+      &.twitter-button {
+        background: url("/img/twitter-logo.png") no-repeat;
+        background-size: contain;
+      }
+      &.linkedin-button {
+        background: url("/img/linkedin-logo.png") no-repeat;
+        background-size: contain;
+        margin-left: 20px;
+      }
+    }
+  }
+
+  .right {
+    position: absolute;
+    right: 100px;
+    li {
+      display: inline-block;
+      color: white;
+    }
   }
 }
