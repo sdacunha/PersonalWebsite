@@ -25,9 +25,9 @@
     <link rel="apple-touch-icon" sizes="144x144" href="/img/apple-icon-144x144.png">
     <link rel="apple-touch-icon" sizes="152x152" href="/img/apple-icon-152x152.png">
     <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192"  href="/img/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/img/android-icon-192x192.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
-    <lin/k rel="icon" type="image/png" sizes="96x96" href="/img/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/img/favicon-96x96.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
     <link rel="manifest" href="/manifest.json">
     <meta name="msapplication-TileColor" content="#ffffff">
@@ -35,57 +35,14 @@
     <meta name="theme-color" content="#ffffff">
 
     <link rel="shortcut icon" href="img/favicon.png">
-
     <link rel="stylesheet"
           href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel='stylesheet' href='/css/sdacunha.min.css'/>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g=" crossorigin="anonymous"></script>
 </head>
-<body class="mdl-wrap mdl-color--grey-100 mdl-color-text--grey-700 mdl-base">
-<div class="demo-layout-waterfall mdl-layout mdl-js-layout">
-    <header class="mdl-layout__header mdl-layout__header--waterfall">
-        <!-- Top row, always visible -->
-        <div class="mdl-layout__header-row">
-            <!-- Title -->
-            <span class="mdl-layout-title">Shadwell's Corner</span>
-            <div class="mdl-layout-spacer"></div>
-            <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable
-                  mdl-textfield--floating-label mdl-textfield--align-right">
-                <!--<label class="mdl-button mdl-js-button mdl-button&#45;&#45;icon"-->
-                       <!--for="waterfall-exp">-->
-                    <!--<i class="material-icons">search</i>-->
-                <!--</label>-->
-                <div class="mdl-textfield__expandable-holder">
-                    <input class="mdl-textfield__input" type="text" name="sample"
-                           id="waterfall-exp">
-                </div>
-            </div>
-        </div>
-        <!-- Bottom row, not visible on scroll -->
-        <div class="mdl-layout__header-row">
-            <div class="mdl-layout-spacer"></div>
-            <!-- Navigation -->
-            <nav class="mdl-navigation">
-                <a class="mdl-navigation__link" href="/">Home</a>
-                <a class="mdl-navigation__link" href="/blog">Blog</a>
-                <a class="mdl-navigation__link" href="/projects">Projects</a>
-                <a class="mdl-navigation__link" href="/resume">Resume</a>
-            </nav>
-        </div>
-    </header>
-    <div class="mdl-layout__drawer">
-        <span class="mdl-layout-title">Shadwell's Corner</span>
-        <nav class="mdl-navigation">
-            <a class="mdl-navigation__link" href="/">Home</a>
-            <a class="mdl-navigation__link" href="/blog">Blog</a>
-            <a class="mdl-navigation__link" href="/projects">Projects</a>
-            <a class="mdl-navigation__link" href="/resume">Resume</a>
-        </nav>
-    </div>
-    <main class="mdl-layout__content">
-        <% content %>
-    </main>
-</div>
+<body>
+<% content %>
 </body>
 <script src="/js/sdacunha.min.js"></script>
 </html>
