@@ -83,7 +83,7 @@
     box-shadow: 5px 5px 30px #000000;
     color: white;
     justify-items: center;
-    background: #263238;
+    background: black;
     display: flex;
     padding-left: 100px;
     padding-right: 100px;
@@ -108,24 +108,11 @@
         h2, h6 {
           margin: 20px 0 0 0;
         }
-        .helpful-logo {
-          margin: 0 auto;
-          background: url("/img/helpful-logo.png");
-          width: 50px;
-          display: inline-block;
-          background-size: contain;
-          height: 50px;
-        }
-        .green-dot {
-          color: green;
-          display: inline;
-          font-size: 64px;
-        }
       }
     }
   }
   .projects-section {
-    background: #37474f;
+    background: black;
     box-shadow: 5px 5px 30px #000000;
     color: white;
     justify-items: center;
@@ -150,7 +137,7 @@
       margin-top: 50px;
       .item {
         display: block;
-        width: 300px;
+        width: 600px;
         margin: 10px;
         height: 300px;
         background: white;
@@ -159,7 +146,7 @@
   }
   .contact-section {
     height: 80vh;
-    background: #90a4ae;
+    background: black;
   }
 }
 
@@ -188,5 +175,7 @@
 
 .pink {
   color: #ff4081;
-  display: inline-block;
+  &.inline {
+    display: inline-block;
+  }
 }
