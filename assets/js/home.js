@@ -2,8 +2,10 @@ function applyHeaderBlur(header, scrollTop, pivotPoint) {
     header.css('filter', 'blur(' + scrollTop / 2 + 'px)');
 
     if (scrollTop > pivotPoint) {
+        header.css('opacity', '0');
         header.css('top', '-' + pivotPoint + 'px');
     } else {
+        header.css('opacity', '1');
         header.css('top', '-' + scrollTop + 'px');
     }
 }

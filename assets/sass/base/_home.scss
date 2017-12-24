@@ -10,7 +10,8 @@
   flex-direction: column;
   background: black url("/img/header_background.jpg") no-repeat;
   background-size: cover;
-  transition: filter 0.1s linear;
+  transition: all 0.1s linear;
+  opacity: 0;
   align-items: center;
   justify-content: center;
 
@@ -92,6 +93,13 @@
       margin: 30px 0 0;
       color: #fff;
     }
+    .pink {
+      color: #ff4081;
+      display: inline-block;
+    }
+    h1 {
+      display: inline-block;
+    }
     .experience-items {
       flex: 1;
       div {
@@ -120,7 +128,6 @@
     }
   }
   .projects-section {
-    height: 80vh;
     background: #37474f;
     box-shadow: 5px 5px 30px #000000;
     color: white;
@@ -130,8 +137,20 @@
     padding-right: 100px;
     flex-direction: column;
 
+    .title {
+      margin: 30px 0 0;
+      color: #fff;
+    }
+    .pink {
+      color: #ff4081;
+      display: inline-block;
+    }
+    h1 {
+      display: inline-block;
+    }
     .project-items {
       flex: 1;
+      margin-top: 50px;
       .item {
         display: block;
         width: 300px;
