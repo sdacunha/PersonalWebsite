@@ -1,14 +1,9 @@
 function applyHeaderBlur(navbar, header, scrollTop, pivotPoint) {
 
     if (scrollTop > pivotPoint) {
-        header.css('opacity', '0');
-        navbar.css('top', '0px');
         navbar.addClass('fixed');
     } else {
-        header.css('opacity', '1');
-        header.css('filter', 'blur(' + scrollTop / 2 + 'px)');
-        header.css('top', '-' + scrollTop + 'px');
-        navbar.css('top', (pivotPoint - scrollTop) + 'px');
+        header.css('filter', 'blur(' + scrollTop / 15 + 'px)');
         navbar.removeClass('fixed');
     }
 }
@@ -27,7 +22,7 @@ $(document).ready(function () {
         slidesToShow: 3,
         speed: 150,
         centerMode: true,
-        autoplaySpeed: 3000,
+        autoplaySpeed: 6000,
         dotsClass: 'position-dots',
         dots: true
     });

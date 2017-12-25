@@ -1,20 +1,18 @@
 
+body {
+  background-color: black;
+}
+
 //noinspection CssUnknownTarget
 .hero-collapsing-header {
-  position: fixed;
-  top: 0;
-  left: 0;
   height: 80vh;
   width: 100%;
-  filter: blur(0);
   display: flex;
   flex-direction: column;
-  background: black url("/img/header_background.jpg") no-repeat;
+  background: url("/img/header_background.jpg") no-repeat;
   background-size: cover;
-  opacity: 0;
   align-items: center;
   justify-content: center;
-  transform: translate3d(0,0,0);
 
 
   h2 {
@@ -34,11 +32,6 @@
 
 //noinspection CssUnknownTarget
 .page-content {
-
-  .filler {
-    height: 80vh;
-    background: black;
-  }
   .about-section {
     height: 80vh;
     background: black;
@@ -132,7 +125,40 @@
         width: 600px;
         margin: 10px;
         height: 300px;
+        border-radius: 5px;
+        outline: 0;
+        padding: 0 20px 20px;
         background: white;
+        color: black;
+
+        .status,.link {
+          padding: 0;
+          margin: 0;
+          display: inline;
+        }
+
+        .info-wrap {
+          width: 100%;
+          text-align: center;
+          margin-bottom: 20px;
+        }
+        .in-progress {
+          color: #568074;
+          display: inline;
+        }
+
+        .status {
+          margin-bottom: 20px;
+        }
+
+        .title {
+          width: 100%;
+          text-align: center;
+          color: black;
+        }
+
+        .description {
+        }
       }
     }
   }
@@ -175,7 +201,7 @@
 //noinspection CssUnknownTarget
 .navbar {
   position: fixed;
-  top: 80vh;
+  top: 0;
   z-index: 999;
   display: flex;
   height: 65px;
