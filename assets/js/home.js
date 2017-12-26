@@ -24,7 +24,22 @@ $(document).ready(function () {
         centerMode: true,
         autoplaySpeed: 6000,
         dotsClass: 'position-dots',
-        dots: true
+        dots: true,
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 2,
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 1,
+                    centerMode: false,
+                }
+            }
+        ]
     });
 
     $('.experience-items').slick({

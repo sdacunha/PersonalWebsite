@@ -14,7 +14,6 @@ body {
   align-items: center;
   justify-content: center;
 
-
   h2 {
     color: white;
     text-shadow: 0 0 10px #000000;
@@ -33,14 +32,12 @@ body {
 //noinspection CssUnknownTarget
 .page-content {
   .about-section {
-    height: 80vh;
     background: black;
     display: flex;
-    align-items: center;
-    padding-left: 100px;
-    padding-right: 100px;
-
+    padding: 100px;
     .profile-picture {
+      margin-top: 10px;
+      border-radius: 5px;
       background: url("/img/profile_picture.jpg");
       background-size: cover;
       height: 200px;
@@ -53,8 +50,7 @@ body {
       display: flex;
       flex-direction: column;
       color: white;
-      margin-left: 50px;
-      margin-right: 50px;
+      margin: 0 50px 0 50px;
 
       .header {
         margin: 0;
@@ -90,7 +86,7 @@ body {
         p {
           margin: 0;
         }
-        h2, h6 {
+        h6 {
           margin: 20px 0 0 0;
         }
       }
@@ -131,7 +127,7 @@ body {
         background: rgba(255, 255, 255, 0.09);
         color: white;
 
-        .status,.link {
+        .status, .link {
           padding: 0;
           margin: 0;
           display: inline;
@@ -254,6 +250,92 @@ body {
     li {
       display: inline-block;
       color: white;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .hero-collapsing-header {
+    h2 {
+      font-size: 2.5em;
+    }
+  }
+  .about-section {
+    flex-direction: column;
+    padding: 50px 0 0 0 !important;
+
+    .header {
+      font-size: 2.5em;
+    }
+    .profile-picture {
+      height: 0 !important;
+      min-height: 0 !important;
+      visibility: hidden;
+    }
+    .information-wrapper {
+      margin: 20px !important;
+      flex: 1;
+    }
+  }
+
+  .experience-section {
+    padding: 20px !important;
+
+    .title {
+      font-size: 2.5em;
+    }
+
+    .experience-items {
+      div {
+        h2 {
+          font-size: 1.5em;
+        }
+      }
+    }
+  }
+  .projects-section {
+    padding: 20px !important;
+
+    .title {
+      font-size: 2.5em;
+    }
+  }
+
+  .navbar {
+    .left {
+      left: 20px;
+
+      ul {
+        padding: 0 !important;
+      }
+    }
+
+
+    .right {
+      right: 20px;
+    }
+  }
+}
+
+@media(max-width: 768px) {
+  .experience-section {
+
+    .title {
+      font-size: 2em;
+    }
+  }
+
+  .projects-section {
+    .title {
+      margin: 0;
+      font-size: 1.6em;
+    }
+
+    .project-items {
+      margin-top: 45px !important;
+      .item {
+        margin: 0 !important;
+      }
     }
   }
 }
