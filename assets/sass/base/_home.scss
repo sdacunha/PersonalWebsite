@@ -128,8 +128,8 @@ body {
         border-radius: 5px;
         outline: 0;
         padding: 0 20px 20px;
-        background: white;
-        color: black;
+        background: rgba(255, 255, 255, 0.09);
+        color: white;
 
         .status,.link {
           padding: 0;
@@ -142,8 +142,13 @@ body {
           text-align: center;
           margin-bottom: 20px;
         }
+
         .in-progress {
-          color: #568074;
+          color: #00bfba;
+          display: inline;
+        }
+        .shelved {
+          color: #1c81bf;
           display: inline;
         }
 
@@ -154,10 +159,11 @@ body {
         .title {
           width: 100%;
           text-align: center;
-          color: black;
+          color: white;
         }
 
         .description {
+          text-align: justify;
         }
       }
     }
